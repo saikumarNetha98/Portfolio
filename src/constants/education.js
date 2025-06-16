@@ -1,8 +1,12 @@
+
+import Tirumala from '../assets/Tirumala-Engineering-College.jpg';
+import SSC from '../assets/ssc.jpg';
+
 export const education = [
   {
     id: 1,
     percentage: '67.8%',
-    background: '/Tirumala-Engineering-College.jpg',
+    background: Tirumala,
     title: 'Tirumala Engineering College',
     duration: '2017 - 2020',
     degree: 'B.Tech (Mech)',
@@ -11,7 +15,7 @@ export const education = [
   {
     id: 2,
     percentage: '62.6%',
-    background: '/Tirumala-Engineering-College.jpg',
+    background: Tirumala,
     title: 'Tirumala Engineering College',
     duration: '2013 - 2017',
     degree: 'Diploma (Mech)',
@@ -20,7 +24,7 @@ export const education = [
   {
     id: 3,
     percentage: '53%',
-    background: '/ssc.jpg',
+    background: SSC,
     title: 'ZPHS High School',
     duration: '2012 - 2013',
     degree: 'SSC',

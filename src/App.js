@@ -1,4 +1,6 @@
-import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Login from './components/Login';
+import Register from './components/Register';
 import Header from './components/Header';
 import About from './components/About';
 import Skills from './components/Skills';
@@ -6,21 +8,29 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Education from './components/Education'
-import './App.css';  // Updated import path
+// other components
 
 function App() {
   return (
-    <div className="App">
+    <Router>
       <Header />
       <main>
-        <About />
-        <Skills />
-        <Projects />
-        <Education />
-        <Contact />
+        <Routes>
+          <Route path="/" element={
+            <>
+              <About />
+              <Skills />
+              <Projects />
+              <Education />
+              <Contact />
+            </>
+          } />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+        </Routes>
       </main>
       <Footer />
-    </div>
+    </Router>
   );
 }
 

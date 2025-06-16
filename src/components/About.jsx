@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/About.css';
-import saikumarPhoto from '../assets/saikumar-photo.jpeg';
+import saikumarPhoto from '../assets/saikumar-photo1.jpg';
 const About = () => {
     return (
         <section id="about" className="about">
