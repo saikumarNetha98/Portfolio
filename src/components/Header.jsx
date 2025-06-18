@@ -1,9 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import '../styles/Header.css';
-import logo from '../assets/saikumar-photo1.jpg'; // Use your actual logo path
+import logo from '../assets/saikumar-photo1.jpg';
 
 const Header = () => {
+  const location = useLocation();
+
   return (
     <header className="header">
       <div className="header__container">
@@ -15,11 +17,12 @@ const Header = () => {
 
         {/* Center: Navigation Menu */}
         <nav className="header__nav">
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#projects">Projects</a>
-          <a href="#education">Education</a>
-          <a href="#contact">Contact</a>
+          <Link to="/" className={location.pathname === '/' ? 'active' : ''}>Home</Link>
+          <Link to="/about" className={location.pathname === '/about' ? 'active' : ''}>About</Link>
+          <Link to="/skills" className={location.pathname === '/skills' ? 'active' : ''}>Skills</Link>
+          <Link to="/projects" className={location.pathname === '/projects' ? 'active' : ''}>Projects</Link>
+          <Link to="/education" className={location.pathname === '/education' ? 'active' : ''}>Education</Link>
+          <Link to="/contact" className={location.pathname === '/contact' ? 'active' : ''}>Contact</Link>
         </nav>
 
         {/* Right: Auth Buttons */}
