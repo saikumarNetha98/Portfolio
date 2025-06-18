@@ -1,7 +1,6 @@
 import React from 'react';
 import { education } from '../constants/education';
 import '../styles/Education.css';
-import Tirumala from '../assets/Tirumala-Engineering-College.jpg';
 
 const Education = () => {
   // Log the education array to debug
