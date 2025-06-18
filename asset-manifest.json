@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.9b673bcb.css",
-    "main.js": "/static/js/main.41eb19fd.js",
-    "static/media/illustrations.jpg": "/static/media/illustrations.3371c2ac3afd08cfdfee.jpg",
-    "static/media/ssc.jpg": "/static/media/ssc.60e8d064d169f4352eea.jpg",
-    "static/media/Shipping-dangerous-goods.jpg": "/static/media/Shipping-dangerous-goods.d77709a5f77783c47bb7.jpg",
-    "static/media/Tirumala-Engineering-College.jpg": "/static/media/Tirumala-Engineering-College.0209dbfa1030bf35049b.jpg",
-    "static/media/saikumar-photo1.jpg": "/static/media/saikumar-photo1.a0b21c70ac31b3dad57e.jpg",
-    "static/media/GoveLogo.png": "/static/media/GoveLogo.226936fcd9cb71f3809c.png",
-    "index.html": "/index.html",
-    "main.9b673bcb.css.map": "/static/css/main.9b673bcb.css.map",
-    "main.41eb19fd.js.map": "/static/js/main.41eb19fd.js.map"
+    "main.css": "/Portfolio/static/css/main.9b673bcb.css",
+    "main.js": "/Portfolio/static/js/main.f8fd5bb3.js",
+    "static/media/illustrations.jpg": "/Portfolio/static/media/illustrations.3371c2ac3afd08cfdfee.jpg",
+    "static/media/ssc.jpg": "/Portfolio/static/media/ssc.60e8d064d169f4352eea.jpg",
+    "static/media/Shipping-dangerous-goods.jpg": "/Portfolio/static/media/Shipping-dangerous-goods.d77709a5f77783c47bb7.jpg",
+    "static/media/Tirumala-Engineering-College.jpg": "/Portfolio/static/media/Tirumala-Engineering-College.0209dbfa1030bf35049b.jpg",
+    "static/media/saikumar-photo1.jpg": "/Portfolio/static/media/saikumar-photo1.a0b21c70ac31b3dad57e.jpg",
+    "static/media/GoveLogo.png": "/Portfolio/static/media/GoveLogo.226936fcd9cb71f3809c.png",
+    "index.html": "/Portfolio/index.html",
+    "main.9b673bcb.css.map": "/Portfolio/static/css/main.9b673bcb.css.map",
+    "main.f8fd5bb3.js.map": "/Portfolio/static/js/main.f8fd5bb3.js.map"
   },
   "entrypoints": [
     "static/css/main.9b673bcb.css",
-    "static/js/main.41eb19fd.js"
+    "static/js/main.f8fd5bb3.js"
   ]
 }
