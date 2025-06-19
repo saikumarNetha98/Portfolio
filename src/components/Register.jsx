@@ -6,13 +6,13 @@ import registerImg from '../assets/register.jpg';
 const Register = () => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
-  const [phone, _setPhone] = useState('');
+  // const [phone, _setPhone] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
   const handleRegister = (e) => {
     e.preventDefault();
-    console.log('Registering user:', { username, email, phone, password });
+    console.log('Registering user:', { username, email, password });
     alert('Registration successful');
     navigate('/login');
   };
