@@ -8,7 +8,6 @@ import {
   Typography,
   Paper,
   IconButton,
-  Tooltip,
   Grid
 } from '@mui/material';
 import {
@@ -249,14 +248,5 @@ const inputStyle = {
   fontSize: '14px',
 };
 
-const submitBtnStyle = {
-  backgroundColor: '#0e7c89',
-  color: '#fff',
-  padding: '12px',
-  borderRadius: '6px',
-  fontSize: '16px',
-  fontWeight: 'bold',
-  textTransform: 'none',
-};
 
 export default Contact;

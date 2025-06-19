@@ -6,7 +6,7 @@ import registerImg from '../assets/register.jpg';
 const Register = () => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
+  const [phone, _setPhone] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 

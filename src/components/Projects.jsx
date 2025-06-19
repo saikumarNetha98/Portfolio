@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, Chip, Button, Grid } from '@mui/material';
+import { Box, Typography, Chip, Grid } from '@mui/material';
 import { projects } from '../constants/projects';
 
 const Projects = () => {
