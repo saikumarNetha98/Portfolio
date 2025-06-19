@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import { Box, TextField, Button, Typography, Paper } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import '../styles/Auth.css';
-import register from '../assets/register.jpg'
+import registerImg from '../assets/register.jpg';
+
 const Register = () => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
@@ -11,69 +12,149 @@ const Register = () => {
 
   const handleRegister = (e) => {
     e.preventDefault();
-
-    // Placeholder logic
     console.log('Registering user:', { username, email, phone, password });
     alert('Registration successful');
     navigate('/login');
   };
 
   return (
-    <div className="login-page">
-      {/* Left side */}
-      <div className="login-left">
-        <div className="animation-container">
-          <h1>Create Your Account</h1>
-          <p>Join the platform and build your professional portfolio today.</p>
-          <img
-            src={register}
-            alt="Register Illustration"
-            className="login-illustration"
-          />
-        </div>
-      </div>
+    <Box sx={{ display: 'flex', height: '100vh', width: '100%' }}>
+      {/* Left Side */}
+      <Box
+        sx={{
+          flex: 1,
+          backgroundColor: '#f0f4f8',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          px: 4,
+          textAlign: 'center',
+        }}
+      >
+        <Typography variant="h4" sx={{ mb: 1, color: '#333' }}>
+          Create Your Account
+        </Typography>
+        <Typography sx={{ mb: 3, color: '#555', maxWidth: 400 }}>
+          Join the platform and build your professional portfolio today.
+        </Typography>
+        <Box
+          component="img"
+          src={registerImg}
+          alt="Register Illustration"
+          sx={{
+            width: '80%',
+            maxWidth: 400,
+            animation: 'float 3s ease-in-out infinite',
+            '@keyframes float': {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' },
+            },
+          }}
+        />
+      </Box>
 
-      {/* Right side form */}
-      <div className="login-right">
-        <div className="login-card">
-          <h2>Register</h2>
-          <form onSubmit={handleRegister} className="login-form">
-            <input
-              type="text"
-              placeholder="Username"
+      {/* Right Side */}
+      <Box
+        sx={{
+          flex: 1,
+          backgroundColor: '#ffffff',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          px: 4,
+        }}
+      >
+        <Paper
+          elevation={4}
+          sx={{
+            p: 4,
+            width: '100%',
+            maxWidth: 400,
+            borderRadius: 3,
+          }}
+        >
+          <Typography variant="h5" sx={{ textAlign: 'center', mb: 3, color: '#222' }}>
+            Register
+          </Typography>
+          <form onSubmit={handleRegister} style={{ display: 'flex', flexDirection: 'column' }}>
+            <TextField
+              label="Username"
+              variant="outlined"
+              fullWidth
+              required
               value={username}
-              required
               onChange={(e) => setUsername(e.target.value)}
+              sx={{ mb: 2 }}
             />
-            <input
+            <TextField
+              label="Email"
               type="email"
-              placeholder="Email"
+              variant="outlined"
+              fullWidth
+              required
               value={email}
-              required
               onChange={(e) => setEmail(e.target.value)}
+              sx={{ mb: 2 }}
             />
-            <input
-              type="text"
-              placeholder="Phone Number"
+            {/* <TextField
+              label="Phone Number"
+              variant="outlined"
+              fullWidth
+              required
               value={phone}
-              required
               onChange={(e) => setPhone(e.target.value)}
-            />
-            <input
+              sx={{ mb: 2 }}
+            /> */}
+            <TextField
+              label="Password"
               type="password"
-              placeholder="Password"
-              value={password}
+              variant="outlined"
+              fullWidth
               required
+              value={password}
               onChange={(e) => setPassword(e.target.value)}
+              sx={{ mb: 3 }}
             />
-            <button type="submit">Register</button>
+            <Button
+              type="submit"
+              variant="contained"
+              fullWidth
+              sx={{
+                py: 1.5,
+                fontWeight: 'bold',
+                backgroundColor: '#007bff',
+                '&:hover': { backgroundColor: '#0056b3' },
+              }}
+            >
+              Register
+            </Button>
           </form>
-          <p className="switch-link" onClick={() => navigate('/login')}>
-            Already have an account? <span>Login</span>
-          </p>
-        </div>
-      </div>
-    </div>
+          <Typography
+            sx={{
+              mt: 2,
+              textAlign: 'center',
+              fontSize: '0.95rem',
+              color: '#555',
+              cursor: 'pointer',
+            }}
+            onClick={() => navigate('/login')}
+          >
+            Already have an account?{' '}
+            <Box
+              component="span"
+              sx={{
+                color: '#007bff',
+                fontWeight: 500,
+                textDecoration: 'underline',
+              }}
+            >
+              Login
+            </Box>
+          </Typography>
+        </Paper>
+      </Box>
+    </Box>
   );
 };
 

@@ -1,12 +1,10 @@
-/* Full page layout */
-.login-page {
+/* .login-page {
   display: flex;
   height: 100vh;
   width: 100%;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Left side: Illustration / animation */
 .login-left {
   flex: 1;
   background-color: #f0f4f8;
@@ -46,7 +44,6 @@
   }
 }
 
-/* Right side: Login form card */
 .login-right {
   flex: 1;
   background-color: #ffffff;
@@ -71,7 +68,6 @@
   color: #222;
 }
 
-/* Form styling */
 .login-form {
   display: flex;
   flex-direction: column;
@@ -106,7 +102,6 @@
   background-color: #0056b3;
 }
 
-/* Link below the form */
 .switch-link {
   margin-top: 15px;
   text-align: center;
@@ -119,4 +114,4 @@
   color: #007bff;
   font-weight: 500;
   text-decoration: underline;
-}
+} */

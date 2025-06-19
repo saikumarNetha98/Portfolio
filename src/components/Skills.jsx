@@ -17,7 +17,7 @@ const skillIcons = {
 const Skills = () => {
     return (
         <section id="skills" className="skills">
-            <h2>Skills</h2>
+            <h2>Techinical Skills</h2>
             <div className="skills__container">
                 {skills.map((skill) => (
                     <div key={skill.name} className="skill__card">

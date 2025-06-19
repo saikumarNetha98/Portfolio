@@ -1,41 +1,91 @@
 import React from 'react';
-import '../styles/Projects.css';
+import { Box, Typography, Chip, Button, Grid } from '@mui/material';
 import { projects } from '../constants/projects';
 
 const Projects = () => {
     return (
-        <section id="projects" className="projects">
-            <h2 style={{ textAlign: 'center', marginBottom: '40px' }}>Projects</h2>
-            <div className="projects__container">
+        <Box id="projects" sx={{ py: 10, backgroundColor: '#f9f9f9' }}>
+            <Typography variant="h4" fontWeight="bold" textAlign="center" mb={6}>
+                Projects
+            </Typography>
+
+            <Grid container spacing={4} justifyContent="center" maxWidth="lg" mx="auto">
                 {projects.map((project) => (
-                    <div
-                        key={project.id}
-                        className="project__card"
-                        data-description={project.description}
-                    >
-                        <div className="project__image">
-                            <img src={project.image} alt={project.title} />
-                        </div>
-                        <div className="project__content">
-                            <h3>{project.title}</h3>
-                            <div className="project__tags">
-                                {project.tags.map((tag) => (
-                                    <span key={tag}>{tag}</span>
-                                ))}
-                            </div>
-                            <div className="project__links">
-                                <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                                    Live Demo
-                                </a>
-                                <a href={project.code} target="_blank" rel="noopener noreferrer">
-                                    View Code
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    <Grid item xs={12} sm={6} md={4} key={project.id}>
+                        <Box
+                            sx={{
+                                position: 'relative',
+                                bgcolor: '#fff',
+                                borderRadius: 3,
+                                boxShadow: 3,
+                                overflow: 'hidden',
+                                transition: 'transform 0.3s ease-in-out',
+                                '&:hover': {
+                                    transform: 'scale(1.03)',
+                                    '& .overlay': {
+                                        opacity: 1,
+                                    },
+                                },
+                                display: 'flex',
+                                flexDirection: 'column',
+                                height: '100%',
+                            }}
+                        >
+                            <Box
+                                component="img"
+                                src={project.image}
+                                alt={project.title}
+                                sx={{
+                                    width: '100%',
+                                    height: 220,
+                                    objectFit: 'cover',
+                                    backgroundColor: '#f0f0f0',
+                                }}
+                            />
+
+                            <Box sx={{ p: 3, flexGrow: 1 }}>
+                                <Typography variant="h6" gutterBottom>
+                                    {project.title}
+                                </Typography>
+
+                                <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, my: 1 }}>
+                                    {project.tags.map((tag) => (
+                                        <Chip
+                                            key={tag}
+                                            label={tag}
+                                            size="small"
+                                            sx={{ bgcolor: '#eef2f5', fontWeight: 500 }}
+                                        />
+                                    ))}
+                                </Box>
+
+                            </Box>
+
+                            <Box
+                                className="overlay"
+                                sx={{
+                                    position: 'absolute',
+                                    inset: 0,
+                                    bgcolor: 'rgba(0,0,0,0.75)',
+                                    color: '#fff',
+                                    opacity: 0,
+                                    transition: 'opacity 0.3s ease-in-out',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    textAlign: 'center',
+                                    px: 3,
+                                    fontSize: '0.95rem',
+                                    fontWeight: 300,
+                                }}
+                            >
+                                {project.description}
+                            </Box>
+                        </Box>
+                    </Grid>
                 ))}
-            </div>
-        </section>
+            </Grid>
+        </Box>
     );
 };
 

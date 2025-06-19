@@ -1,4 +1,4 @@
-/* General Layout */
+/* General Layout
 .header {
   width: 100%;
   background-color: #ffffff;
@@ -17,7 +17,6 @@
   align-items: center;
 }
 
-/* Logo */
 .logo {
   width: 40px;
   height: 40px;
@@ -37,7 +36,6 @@
   color: #333;
 }
 
-/* Navigation Links */
 .header__nav a {
   position: relative;
   margin: 0 12px;
@@ -49,7 +47,6 @@
   overflow: hidden;
 }
 
-/* Initial state of underline (hidden) */
 .header__nav a::after {
   content: '';
   position: absolute;
@@ -61,13 +58,11 @@
   transition: width 0.3s ease-in-out;
 }
 
-/* Hover underline */
 .header__nav a:hover::after {
   width: 100%;
 }
 
 
-/* Animated background effect for active link */
 .header__nav a::before {
   content: '';
   position: absolute;
@@ -81,17 +76,14 @@
   border-radius: 6px;
 }
 
-/* Trigger the animation */
 .header__nav a.active::before {
   width: 100%;
 }
 
-/* Text color change when active */
 .header__nav a.active {
   color: #007bff;
 }
 
-/* Auth buttons */
 .header__auth .btn {
   margin-left: 15px;
   padding: 8px 14px;
@@ -118,8 +110,7 @@
   color: white;
 }
 
-/* Optional for smooth scrolling */
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
-}
+} */
